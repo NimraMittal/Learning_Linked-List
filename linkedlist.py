@@ -1,5 +1,5 @@
 class Node:
-    def __init__(self):
+    def __init__(self,data):
         self.data = data 
         self.next = None
 class LinkedList:
@@ -15,13 +15,14 @@ class LinkedList:
                 current = current.next
             current.next = new_node
     def display (self):
-        currrent = self.head
-        while current !=  None:
+        current = self.head
+        while current:
             print(current.data, end=" ")
             current = current.next
-    my_list = LinkedList()
-    for i in range(5):
-        data = int(input())
-        my_list.insert_at_end(data)
-    my_list.display()
+        print(None)
+my_list = LinkedList()
+for i in range(5):
+    data = int(input())
+    my_list.insert_at_end(data)
+my_list.display()
     
